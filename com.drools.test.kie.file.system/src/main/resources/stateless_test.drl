@@ -1,0 +1,13 @@
+//created on: 19/08/2017
+package com.common.fmwk.drools.impl;
+
+import com.drools.test.com.drools.test.kie.file.system.Message;
+
+rule "Test Rule"
+    when
+        $message : Message(name != null )
+    then
+    	$message.setName("Tom");
+        $message.setText("I've got your message");
+end
+

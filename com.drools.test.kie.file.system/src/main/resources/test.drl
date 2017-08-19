@@ -1,0 +1,15 @@
+//created on: 19/08/2017
+package com.common.fmwk.drools.impl;
+
+import com.drools.test.com.drools.test.kie.file.system.Message;
+import com.drools.test.com.drools.test.kie.file.system.DroolsResultProcessor;
+
+global DroolsResultProcessor resultProcessor
+
+rule "Test Rule"
+    when
+        $message : Message(name != null )
+    then
+        resultProcessor.processResults($message);
+end
+
