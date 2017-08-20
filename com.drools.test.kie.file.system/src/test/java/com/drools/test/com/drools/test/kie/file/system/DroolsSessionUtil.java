@@ -21,7 +21,7 @@ import org.kie.api.runtime.conf.ClockTypeOption;
 
 public class DroolsSessionUtil {
 
-	private static final String RULES_PACKAGE = "com.mlnms.common.fmwk.drools.impl";
+	private static final String RULES_PACKAGE = "com.common.fmwk.drools.impl";
 
 	private static final String SESSION_NAME_PREFIX = "KSession_";
 

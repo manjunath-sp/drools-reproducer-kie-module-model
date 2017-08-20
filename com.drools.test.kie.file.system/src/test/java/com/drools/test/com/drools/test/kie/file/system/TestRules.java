@@ -24,6 +24,7 @@ public class TestRules {
 		KieSession kieSession = droolsSessionUtil.createNewStatefulSession(resultProcessor, rules, "KBaseName");
 
 		kieSession.insert(new Message("jack", "hey there!"));
+		kieSession.fireAllRules();
 
 		Message message = (Message) resultProcessor.getCaptureEvent();
 		Assert.assertNotNull(message);
